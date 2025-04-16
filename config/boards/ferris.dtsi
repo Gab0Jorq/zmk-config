@@ -1,5 +1,3 @@
 / {
-    model = "Ferris Keyboard";
-    compatible = "ferris";
-    // Aquí puedes agregar otras configuraciones específicas para el Ferris Keyboard.
+    compatible = "zmk,keyboard-shield";
 };
