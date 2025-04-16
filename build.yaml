@@ -19,7 +19,7 @@
 #     shield: cradio_right
 
 include:
-  - board: ferris
+  - board: nice_nano_v2
     shield: ferris
     keymap: config/boards/shields/ferris.keymap
 
