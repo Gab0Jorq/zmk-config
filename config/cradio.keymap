@@ -4,62 +4,60 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-// #include "home_mods.dtsi"
-
-
-// &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
-// };
-
-/ { 
-
-
-    combos {
-        compatible = "zmk,combos";
-
-        combo_fp_caps {
-            timeout-ms = <50>;
-            key-positions = <8 9>;
-            bindings = <&kp CAPS>;
-        };
-    };
-
-    macros {
-        compatible = "zmk,behavior-macros";
-
-        mac_hom: homologo {
-            label = "HOMOLOGO";
-            #binding-cells = <0>;
-            bindings = <&str HOMOLOGO>;
-        };
-
-        mac_create: create_tb {
-            label = "CREATE_TB";
-            #binding-cells = <0>;
-            bindings = <&str CREATE_TB>;
-        };
-
-    };
-
-    strings {
-        HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
-        CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
-    };
-
-        keymap {
-        compatible = "zmk,keymap";
-
-        colemak_layer {
-            bindings = <
-                &kp Q  &kp W     &kp F       &kp P        &kp G          &kp J    &kp L     &kp U     &kp Y     &kp SQT
-                &kp A     &kp R   &kp S     &kp T      &kp D          &kp H    &kp N   &kp E   &kp I   &kp O
-                &kp Z   &kp X     &kp C       &kp V        &kp B          &kp K    &kp M     &kp COMMA &kp KP_DOT   &kp KP_SLASH
-                          &kp DEL   &kp BSPC                          &kp ENTER     &kp TAB
-            >;
-        };
-    };
-};
+ #include <behaviors.dtsi>
+ #include <dt-bindings/zmk/keys.h>
+ #include <dt-bindings/zmk/bt.h>
+ // #include "home_mods.dtsi"
+ 
+ 
+ // &mt {
+ //   flavor = "tap-preferred";
+ //   tapping_term_ms = <200>;
+ // };
+ 
+ { 
+     combos {
+         compatible = "zmk,combos";
+ 
+         combo_fp_caps {
+             timeout-ms = <50>;
+             key-positions = <8 9>;
+             bindings = <&kp CAPS>;
+         };
+     };
+ 
+    //  macros {
+    //      compatible = "zmk,behavior-macros";
+ 
+    //      mac_hom: homologo {
+    //          label = "HOMOLOGO";
+    //          #binding-cells = <0>;
+    //          bindings = <&str HOMOLOGO>;
+    //      };
+ 
+    //      mac_create: create_tb {
+    //          label = "CREATE_TB";
+    //          #binding-cells = <0>;
+    //          bindings = <&str CREATE_TB>;
+    //      };
+    //  };
+ 
+    //  strings {
+    //      HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
+    //      CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
+    //  };
+ 
+     keymap {
+         compatible = "zmk,keymap";
+ 
+         colemak_layer {
+             bindings = <
+                 &kp Q  &kp W     &kp F       &kp P        &kp G          &kp J    &kp L     &kp U     &kp Y     &kp SQT
+                 &kp A     &kp R   &kp S     &kp T      &kp D          &kp H    &kp N   &kp E   &kp I   &kp O
+                 &kp Z   &kp X     &kp C       &kp V        &kp B          &kp K    &kp M     &kp COMMA &kp DOT   &kp SLASH
+                           &kp DEL   &kp BSPC                          &kp ENTER     &kp TAB
+             >;
+         };
+     };
+ };
+ 
