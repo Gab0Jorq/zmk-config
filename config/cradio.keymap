@@ -16,87 +16,130 @@
 
 / { 
 
+    behaviors {
+        compatible = "zmk,behaviors";
+
+        td_qtab: td_qtab {
+            label = "TD Q_TAB";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp TAB>;
+        };
+
+        td_comma: td_comma_scln {
+            label = "TD , ;";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+        };
+
+        td_slesh: td_slesh_esc {
+            label = "TD / ESC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SLASH>, <&kp ESC>;
+        };
+    };
+
+    bindings {
+        home_z = &mt LGUI Z;
+        home_r = &mt LALT R;
+        home_s = &mt LSFT S;
+        home_t = &mt LCTRL T;
+
+        home_n = &mt RCTRL N;
+        home_e = &mt RSFT E;
+        home_i = &mt LALT I;
+        home_o = &mt RGUI O;
+
+        lt_num = &lt NUM LGUI;
+        lt_nav = &lt NAV SPC;
+        lt_sym = &lt SYM ENT;
+        lt_fn_eq = &lt FN EQUAL;
+
+        algr_bspc = &altgr BSPC;
+
+        lgui_e = &kp LC(E);
+    };
+
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-        
-         combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
-        };
-        
-            combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
-        };
-        
-                    combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
-        };
-        
-                           combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-        
-        
-           combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
-        };
-        
 
-        
+        combo_fp_caps {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp CAPS>;
+        };
+    };
+
+    macros {
+        compatible = "zmk,behavior-macros";
+
+        mac_hom: homologo {
+            label = "HOMOLOGO";
+            #binding-cells = <0>;
+            bindings = <&str HOMOLOGO>;
+        };
+
+        mac_create: create_tb {
+            label = "CREATE_TB";
+            #binding-cells = <0>;
+            bindings = <&str CREATE_TB>;
+        };
+
+    };
+
+    strings {
+        HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
+        CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
     };
 
         keymap {
-                compatible = "zmk,keymap";
-                
-       		default_layer {
-		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
-		&kp A &kp S &kp D &kp F &kp G 			        	        &kp H &kp J &kp K &kp L &kp QUOT
-		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &kp SLASH
-          				&kp P &kp BKSP  				&kp RET &kp SPC
-		>;
-		};
+        compatible = "zmk,keymap";
 
-       		left_layer {
-		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL 
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL 
-					    &mo 1  &kp LGUI  					&kp RGUI &mo 2 
-		>;
-		};
-		
-		right_layer {
-		bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
-		>;
-		};	
-		
-		tri_layer {
-		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
-		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-					 &trans &trans  					&trans &trans 
-		>;
-		};	
-        
-	};
+        colemak_layer {
+            bindings = <
+                &td_qtab  &kp W     &kp F       &kp P        &kp G          &kp J    &kp L     &kp U     &kp Y     &kp SQT
+                &kp A     &home_r   &home_s     &home_t      &kp D          &kp H    &home_n   &home_e   &home_i   &home_o
+                &home_z   &kp X     &kp C       &kp V        &kp B          &kp K    &kp M     &td_comma &kp DOT   &td_slesh
+                          &lt_num   &algr_bspc                          &lt_nav     &lt_sym
+            >;
+        };
+
+        num_layer {
+            bindings = <
+                &kp MPRV  &kp MPLY  &kp MNXT    &none        &kp PSCR       &none    &kp N7    &kp N8    &kp N9    &none
+                &kp VOLD  &kp MUTE  &kp VOLU    &none        &mac_select    &s(KP_8) &kp N4    &kp N5    &kp N6    &kp MINUS
+                &none     &mac_hom  &mac_create &kp CALC     &lgui_e        &s(KP_6) &kp N1    &kp N2    &kp N3    &kp PLUS
+                          &none     &none                              &kp N0     &lt_fn_eq
+            >;
+        };
+
+        sym_layer {
+            bindings = <
+                &kp EXCL  &kp UNDER &kp AT      &none        &none          &kp ASTR &kp LBKT  &kp CARET &kp RBKT  &kp GRAVE
+                &none     &s(KP_5)  &s(KP_7)     &none        &none          &kp NUBS &kp LPAR  &kp DLLR  &kp RPAR  &none
+                &kp DM_REC1 &kp DM_PLY1 &none   &none        &none          &kp PIPE &kp LCBR  &kp HASH  &kp RCBR  &none
+                             &none   &kp BSPC                         &none      &none
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+                &none     &none     &none       &none        &none          &kp WH_U &none     &kp UP    &none     &none
+                &none     &none     &none       &kp DEL      &none          &kp WH_D &kp LEFT  &kp DOWN  &kp RIGHT &none
+                &none     &none     &none       &none        &none          &kp WH_L &kp WH_R  &none     &none     &reset
+                            &lt_fn    &kp BSPC                        &none      &none
+            >;
+        };
+
+        fn_layer {
+            bindings = <
+                &kp TAB   &none     &none       &none        &kp ESC        &none    &kp F7    &kp F8    &kp F9    &kp F10
+                &kp DEL   &kp LALT  &none       &none        &none          &none    &kp F4    &kp F5    &kp F6    &kp F11
+                &kp CAPS  &none     &none       &none        &kp SLEP       &none    &kp F1    &kp F2    &kp F3    &kp F12
+                            &none   &none                              &none      &none
+            >;
+        };
+    };
 };
