@@ -1,0 +1,22 @@
+/ {
+    bindings {
+        home_z = &mt LGUI Z;
+        home_r = &mt LALT R;
+        home_s = &mt LSFT S;
+        home_t = &mt LCTRL T;
+
+        home_n = &mt RCTRL N;
+        home_e = &mt RSFT E;
+        home_i = &mt LALT I;
+        home_o = &mt RGUI O;
+
+        lt_num = &lt NUM LGUI;
+        lt_nav = &lt NAV SPC;
+        lt_sym = &lt SYM ENT;
+        lt_fn_eq = &lt FN EQUAL;
+
+        algr_bspc = &altgr BSPC;
+
+        lgui_e = &kp LC(E);
+    };
+};
