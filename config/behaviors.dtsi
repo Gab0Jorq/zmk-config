@@ -1,0 +1,26 @@
+/ {
+    behaviors {
+        compatible = "zmk,behaviors";
+
+        td_qtab: td_qtab {
+            label = "TD Q_TAB";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp TAB>;
+        };
+
+        td_comma: td_comma_scln {
+            label = "TD , ;";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+        };
+
+        td_slesh: td_slesh_esc {
+            label = "TD / ESC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SLASH>, <&kp ESC>;
+        };
+    };
+};

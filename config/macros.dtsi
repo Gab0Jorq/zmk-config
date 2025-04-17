@@ -1,0 +1,30 @@
+/ {
+    macros {
+        compatible = "zmk,behavior-macros";
+
+        mac_hom: homologo {
+            label = "HOMOLOGO";
+            #binding-cells = <0>;
+            bindings = <&str HOMOLOGO>;
+        };
+
+        mac_create: create_tb {
+            label = "CREATE_TB";
+            #binding-cells = <0>;
+            bindings = <&str CREATE_TB>;
+        };
+
+        mac_select: select_stmt {
+            label = "SELECT";
+            #binding-cells = <0>;
+            bindings = <&str SELECT>;
+        };
+    };
+
+    strings {
+        HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
+        CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
+        SELECT = "SELECT *
+FROM";
+    };
+};
