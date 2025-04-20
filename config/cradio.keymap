@@ -10,8 +10,8 @@
  #include <dt-bindings/zmk/outputs.h>
  
  // Home row mods macro
-#define HRML(k1,k2,k3) &ht LALT k1  &ht LSHIFT k2, &ht LCTRL k3 
-#define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHIFT k2  &ht LALT k3, &ht RGUI k4
+#define HRML(k1,k2,k3) &ht LALT k1  &ht LSHIFT k2 &ht LCTRL k3 
+#define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHIFT k2  &ht LALT k3 &ht RGUI k4
 
  // Layer tap macro
  
