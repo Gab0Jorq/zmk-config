@@ -10,8 +10,10 @@
  #include <dt-bindings/zmk/outputs.h>
  
  // Home row mods macro
-#define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
+#define HRML(k1,k2,k3) &ht LALT k1  &ht LSHIFT k2, &ht LCTRL k3 
+#define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHIFT k2  &ht LALT k3, &ht RGUI k4
+
+ // Layer tap macro
  
 // define layers
 #define COLEMAK 0
@@ -79,10 +81,10 @@
             &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp A     HRML(R,         S,         T)     &kp D          &kp H      HRMR(N,        E,           I)   &kp O
+            &kp A     HRML(R,         S,         T)     &kp D          &kp H      HRMR(N,        E,           I,       O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &kp COMMA  &kp DOT    &kp SLASH
+            &ht Z      &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &kp COMMA  &kp DOT    &kp SLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &lt NUM LGUI  &kp BSPC    &lt SYM ENTER  &lt NAV SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
