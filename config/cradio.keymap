@@ -78,7 +78,64 @@
         homologo: homologo {
             label = "Send Homologo";
             compatible = "zmk,behavior-macro";
-            bindings = <&macro_tap "HOMOLOGA">;
+            bindings = <&macro_tap &kp GRAVE 
+            &kp R 
+            &kp E 
+            &kp S 
+            &kp P 
+            &kp A 
+            &kp L 
+            &kp D 
+            &kp O 
+            &kp MINUS 
+            &kp I 
+            &kp N 
+            &kp T 
+            &kp E 
+            &kp L 
+            &kp I 
+            &kp G 
+            &kp E 
+            &kp N 
+            &kp C 
+            &kp I 
+            &kp A 
+            &kp MINUS 
+            &kp R 
+            &kp I 
+            &kp E 
+            &kp S 
+            &kp G 
+            &kp O 
+            &kp DOT 
+            &kp C 
+            &kp O 
+            &kp B 
+            &kp R 
+            &kp A 
+            &kp N 
+            &kp Z 
+            &kp A 
+            &kp DOT 
+            &kp H 
+            &kp O 
+            &kp M 
+            &kp O 
+            &kp L 
+            &kp O 
+            &kp G 
+            &kp A 
+            &kp UNDERSCORE 
+            &kp C 
+            &kp U 
+            &kp E 
+            &kp N 
+            &kp T 
+            &kp A 
+            &kp S 
+            &kp GRAVE 
+            &kp LEFT_PAREN 
+            &kp RIGHT_PAREN>;
         };
     };
         //  strings {
