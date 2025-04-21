@@ -72,7 +72,7 @@
             //  };
             
             
-        keymap {
+        keymap { //FALTA DOBLE TAP DANCE PARA ;
             compatible = "zmk,keymap";
             default_layer {
                 bindings = <
@@ -91,17 +91,17 @@
             >;
         };
 
-        num_layer {
+        num_layer { //FALTA MACRO DE HOMOLOGO
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp C_PREV   &kp C_PP  &kp C_NEXT  &trans     &kp PSCRN          &trans      &kp N7      &kp N8      &kp N9      &trans
+            &kp trans   &kp trans  &kp trans  &trans     &kp PSCRN          &trans      &kp N7      &kp N8      &kp N9      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp C_VOL_DN   &kp C_MUTE     &kp C_VOL_UP      &trans      &trans    &kp LS(N8)       &kp N4    &kp N5     &kp N6      &kp MINUS   
+            &kp trans   &kp trans     &kp trans      &trans      &trans    &kp LS(N8)       &kp N4    &kp N5     &kp N6      &kp MINUS   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans    &trans     &trans   &kp C_AL_CALC   &kp LGUI(E)         &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
+            &trans    &trans     &trans   &kp trans   &kp LGUI(E)         &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans  &trans              &kp N0    &lt FN EQUAL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -115,12 +115,12 @@
             &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &trans    &trans        &trans      &trans      &trans    &trans       &trans    &trans     &trans      &trans   
+            &trans    &trans        &trans    &trans      &trans    &trans       &trans    &trans     &trans      &trans   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
             &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans  &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &trans  &trans              &trans  &trans
+                                           &trans        &kp trans               &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
