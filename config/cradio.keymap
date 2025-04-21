@@ -78,7 +78,7 @@
         homologo: homologo {
             label = "Send Homologo";
             compatible = "zmk,behavior-macro";
-            bindings = <&macro_tap "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()">;
+            bindings = <&macro_tap "HOMOLOGA">;
         };
     };
         //  strings {
