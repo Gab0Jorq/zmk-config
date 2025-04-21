@@ -67,22 +67,17 @@
     //         #binding-cells = <1>;
     //     };
     // };
-    //  macros {
-    //      compatible = "zmk,behavior-macros";
- 
-    //      mac_hom: homologo {
-    //          label = "HOMOLOGO";
-    //          #binding-cells = <0>;
-    //          bindings = <&str HOMOLOGO>;
-    //      };
-    
-    //      mac_create: create_tb {
-        //          label = "CREATE_TB";
-        //          #binding-cells = <0>;
-        //          bindings = <&str CREATE_TB>;
-        //      };
-        //  };
-        
+
+    macros {
+        send_hom: send_hom {
+            label = "Send Homologo";
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                &macro_tap "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()"
+                &kp LEFT
+            >;
+        };
+    };
         //  strings {
             //      HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
             //      CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
@@ -118,7 +113,7 @@
             &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP   &trans   &trans  &kp LS(N8)       &kp N4    &kp N5     &kp N6      &kp MINUS   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans    &trans     &trans   &trans   &kp LG(E)           &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
+            &trans    &send_hom     &trans   &trans   &kp LG(E)           &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans  &kp BSPC              &kp N0    &lt FN EQUAL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
