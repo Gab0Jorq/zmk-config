@@ -48,6 +48,20 @@
             bindings = <&kp KP_COMMA>, <&kp SEMICOLON>;
         };
 
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp Q>, <&kp TAB>;
+        };
+
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SLASH>, <&kp ESC>;
+        };
+
         // homologo: homologo {
         //     compatible = "zmk,behavior-send-string";
         //     #binding-cells = <0>;
@@ -74,71 +88,71 @@
     //     };
     // };
 
-    macros {
-        homologo: homologo {
-            label = "Send Homologo";
-            compatible = "zmk,behavior-macro";
-            bindings = <&macro_tap &kp GRAVE 
-            &kp R 
-            &kp E 
-            &kp S 
-            &kp P 
-            &kp A 
-            &kp L 
-            &kp D 
-            &kp O 
-            &kp MINUS 
-            &kp I 
-            &kp N 
-            &kp T 
-            &kp E 
-            &kp L 
-            &kp I 
-            &kp G 
-            &kp E 
-            &kp N 
-            &kp C 
-            &kp I 
-            &kp A 
-            &kp MINUS 
-            &kp R 
-            &kp I 
-            &kp E 
-            &kp S 
-            &kp G 
-            &kp O 
-            &kp DOT 
-            &kp C 
-            &kp O 
-            &kp B 
-            &kp R 
-            &kp A 
-            &kp N 
-            &kp Z 
-            &kp A 
-            &kp DOT 
-            &kp H 
-            &kp O 
-            &kp M 
-            &kp O 
-            &kp L 
-            &kp O 
-            &kp G 
-            &kp A 
-            &kp UNDERSCORE 
-            &kp C 
-            &kp U 
-            &kp E 
-            &kp N 
-            &kp T 
-            &kp A 
-            &kp S 
-            &kp GRAVE 
-            &kp LPAR 
-            &kp RPAR
-            &kp LEFT>;
-        };
-    };
+    // macros {
+    //     homologo: homologo {
+    //         label = "Send Homologo";
+    //         compatible = "zmk,behavior-macro";
+    //         bindings = <&macro_tap &kp GRAVE 
+    //         &kp R 
+    //         &kp E 
+    //         &kp S 
+    //         &kp P 
+    //         &kp A 
+    //         &kp L 
+    //         &kp D 
+    //         &kp O 
+    //         &kp MINUS 
+    //         &kp I 
+    //         &kp N 
+    //         &kp T 
+    //         &kp E 
+    //         &kp L 
+    //         &kp I 
+    //         &kp G 
+    //         &kp E 
+    //         &kp N 
+    //         &kp C 
+    //         &kp I 
+    //         &kp A 
+    //         &kp MINUS 
+    //         &kp R 
+    //         &kp I 
+    //         &kp E 
+    //         &kp S 
+    //         &kp G 
+    //         &kp O 
+    //         &kp DOT 
+    //         &kp C 
+    //         &kp O 
+    //         &kp B 
+    //         &kp R 
+    //         &kp A 
+    //         &kp N 
+    //         &kp Z 
+    //         &kp A 
+    //         &kp DOT 
+    //         &kp H 
+    //         &kp O 
+    //         &kp M 
+    //         &kp O 
+    //         &kp L 
+    //         &kp O 
+    //         &kp G 
+    //         &kp A 
+    //         &kp UNDERSCORE 
+    //         &kp C 
+    //         &kp U 
+    //         &kp E 
+    //         &kp N 
+    //         &kp T 
+    //         &kp A 
+    //         &kp S 
+    //         &kp GRAVE 
+    //         &kp LPAR 
+    //         &kp RPAR
+    //         &kp LEFT>;
+    //     };
+    // };
         //  strings {
             //      HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
             //      CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
@@ -151,13 +165,13 @@
                 bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp SQT
+            &td1      &kp W      &kp F      &kp P      &kp G          &kp J      &kp L      &kp U      &kp Y      &kp SQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
             &kp A     HRML(R,         S,         T)     &kp D          &kp H      HRMR(N,        E,           I,       O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &ht LGUI Z  &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &td0  &kp DOT    &kp SLASH
+            &ht LGUI Z  &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &td0  &kp DOT    &td2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &lt NUM LGUI  &kp RA(BSPC)    &lt SYM ENTER  &lt NAV SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -174,7 +188,7 @@
             &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP   &trans   &trans  &kp LS(N8)       &kp N4    &kp N5     &kp N6      &kp MINUS   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans    &homologo     &trans   &trans   &kp LG(E)           &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
+            &trans    &trans     &trans   &trans   &kp LG(E)           &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans  &kp BSPC              &kp N0    &lt FN EQUAL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
