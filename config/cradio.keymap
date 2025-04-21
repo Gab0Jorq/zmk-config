@@ -141,10 +141,10 @@
             &kp EXCL      &kp UNDER      &kp AT      &trans      &trans    &kp KP_ASTERISK  &kp LBKT      &kp CARET     &kp RBKT     &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &trans    &kp LS(N7)        &kp LS(N7)      &trans      &trans    &kp BSLH      &kp LPAR      &kp DLLR     &kp RPAR     &trans   
+            &trans    &kp LS(N7)   &kp LS(N7)   &trans    &trans       &kp BSLH      &kp LPAR      &kp DLLR     &kp RPAR     &trans   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans      &trans      &trans      &trans      &trans    &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
+            &trans      &trans      &trans      &trans      &trans     &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans  &kp BSPC              &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -155,13 +155,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans      &trans      &trans
+            &kp TAB      &trans      &trans      &trans      &kp ESC    &trans      &kp F7      &kp F8      &kp F9      &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &trans    &trans        &trans      &trans      &trans    &trans       &trans    &trans     &trans      &trans   
+            &kp DEL    &kp LALT     &trans    &trans    &trans          &trans       &kp F4    &kp F5     &kp F6      &kp F11   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans      &trans      &trans      &trans      &trans          &trans      &trans      &trans  &trans    &trans
+            &kp CAPS    &trans    &trans    &trans     &kp C_SLEEP      &trans      &kp F1      &kp F2  &kp F3    &kp F12
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans      &trans           &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
