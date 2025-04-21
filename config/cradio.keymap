@@ -134,8 +134,9 @@
             &kp A 
             &kp S 
             &kp GRAVE 
-            &kp LEFT_PAREN 
-            &kp RIGHT_PAREN>;
+            &kp LPAR 
+            &kp RPAR
+            &kp LEFT>;
         };
     };
         //  strings {
