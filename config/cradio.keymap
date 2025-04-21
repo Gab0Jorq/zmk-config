@@ -8,7 +8,7 @@
  #include <dt-bindings/zmk/keys.h>
  #include <dt-bindings/zmk/bt.h>
  #include <dt-bindings/zmk/outputs.h>
- #include <dt-bindings/zmk/dynamic-macros.h>
+//  #include <dt-bindings/zmk/dynamic-macros.h>
  
  // Home row mods macro
 #define HRML(k1,k2,k3) &ht LALT k1  &ht LSHIFT k2 &ht LCTRL k3 
@@ -52,13 +52,13 @@
     };
     
 
-    macros {
-        dyn-macro: dyn-macro {
-            label = "ZM_dynamic-macro";
-            compatible = "zmk,behavior-dynamic-macro";
-            #binding-cells = <1>;
-        };
-    };
+    // macros {
+    //     dyn-macro: dyn-macro {
+    //         label = "ZM_dynamic-macro";
+    //         compatible = "zmk,behavior-dynamic-macro";
+    //         #binding-cells = <1>;
+    //     };
+    // };
     //  macros {
     //      compatible = "zmk,behavior-macros";
  
@@ -144,7 +144,7 @@
             &trans    &kp LS(N7)        &kp LS(N7)      &trans      &trans    &kp BSLH      &kp LPAR      &kp DLLR     &kp RPAR     &trans   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &dyn-macro RECORD      &dyn-macro PLAY      &trans      &trans      &trans    &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
+            &trans      &trans      &trans      &trans      &trans    &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans  &kp BSPC              &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
