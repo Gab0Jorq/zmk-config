@@ -48,11 +48,11 @@
             bindings = <&kp KP_COMMA>, <&kp SEMICOLON>;
         };
 
-        homologo: homologo {
-            compatible = "zmk,behavior-send-string";
-            #binding-cells = <0>;
-            text = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
-        };
+        // homologo: homologo {
+        //     compatible = "zmk,behavior-send-string";
+        //     #binding-cells = <0>;
+        //     text = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
+        // };
 
     };
 
@@ -74,16 +74,13 @@
     //     };
     // };
 
-    // macros {
-    //     send_hom: send_hom {
-    //         label = "Send Homologo";
-    //         compatible = "zmk,behavior-macro";
-    //         bindings = <
-    //             &macro_tap 
-    //             &kp LEFT
-    //         >;
-    //     };
-    // };
+    macros {
+        homologo: homologo {
+            label = "Send Homologo";
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_tap "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()">;
+        };
+    };
         //  strings {
             //      HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
             //      CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
