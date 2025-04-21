@@ -103,7 +103,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
             &trans    &trans     &trans   &trans   &kp LG(E)           &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &trans  &trans              &kp N0    &lt FN EQUAL
+                                           &trans  &kp BSPC              &kp N0    &lt FN EQUAL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -112,15 +112,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &trans      &trans      &trans      &trans      &trans    &trans      &trans      &trans      &trans      &trans
+            &trans      &trans      &trans      &trans      &trans    &kp C_AC_SCROLL_UP   &kp HOME   &kp UP   &kp END   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &trans    &trans        &trans    &trans      &trans      &trans       &trans    &trans     &trans      &trans   
+            &trans    &trans        &trans    &kp DEL      &trans     &kp C_AC_SCROLL_DOWN       &kp LEFT    &kp DOWN     &kp RIGHT      &trans   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans      &trans      &trans      &trans      &trans    &trans      &trans      &trans  &trans    &trans
+            &trans      &trans      &trans     &trans      &trans    &trans      &trans      &trans  &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &trans        &trans               &trans  &trans
+                                           &lt FN DEL        &kp BSPC               &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
