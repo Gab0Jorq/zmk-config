@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
- #include <behaviors.dtsi>
- #include <dt-bindings/zmk/keys.h>
- #include <dt-bindings/zmk/bt.h>
- #include <dt-bindings/zmk/outputs.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 //  #include <dt-bindings/zmk/dynamic-macros.h>
  
  // Home row mods macro
@@ -40,6 +40,14 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_COMMA>, <&kp SEMICOLON>;
+        };
+
     };
 
     combos {
@@ -93,9 +101,9 @@
             &kp A     HRML(R,         S,         T)     &kp D          &kp H      HRMR(N,        E,           I,       O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &ht LGUI Z  &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &kp COMMA  &kp DOT    &kp SLASH
+            &ht LGUI Z  &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &td0  &kp DOT    &kp SLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt NUM LGUI  &kp BSPC    &lt SYM ENTER  &lt NAV SPACE
+                                           &lt NUM LGUI  &kp RA(BSPC)    &lt SYM ENTER  &lt NAV SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
