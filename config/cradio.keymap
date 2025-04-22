@@ -220,7 +220,7 @@
             &trans    &kp LS(N7)   &kp LS(N7)   &trans    &trans       &kp BSLH      &kp LPAR      &kp DLLR     &kp RPAR     &trans   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &bt BT_CLR      &bt BT_SEL 0      &trans      &trans      &trans     &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
+            &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &trans      &trans     &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &trans  &kp BSPC              &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
