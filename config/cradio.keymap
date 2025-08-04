@@ -86,71 +86,42 @@
     //     };
     // };
 
-    // macros {
-    //     homologo: homologo {
-    //         label = "Send Homologo";
-    //         compatible = "zmk,behavior-macro";
-    //         bindings = <&macro_tap &kp GRAVE 
-    //         &kp R 
-    //         &kp E 
-    //         &kp S 
-    //         &kp P 
-    //         &kp A 
-    //         &kp L 
-    //         &kp D 
-    //         &kp O 
-    //         &kp MINUS 
-    //         &kp I 
-    //         &kp N 
-    //         &kp T 
-    //         &kp E 
-    //         &kp L 
-    //         &kp I 
-    //         &kp G 
-    //         &kp E 
-    //         &kp N 
-    //         &kp C 
-    //         &kp I 
-    //         &kp A 
-    //         &kp MINUS 
-    //         &kp R 
-    //         &kp I 
-    //         &kp E 
-    //         &kp S 
-    //         &kp G 
-    //         &kp O 
-    //         &kp DOT 
-    //         &kp C 
-    //         &kp O 
-    //         &kp B 
-    //         &kp R 
-    //         &kp A 
-    //         &kp N 
-    //         &kp Z 
-    //         &kp A 
-    //         &kp DOT 
-    //         &kp H 
-    //         &kp O 
-    //         &kp M 
-    //         &kp O 
-    //         &kp L 
-    //         &kp O 
-    //         &kp G 
-    //         &kp A 
-    //         &kp UNDERSCORE 
-    //         &kp C 
-    //         &kp U 
-    //         &kp E 
-    //         &kp N 
-    //         &kp T 
-    //         &kp A 
-    //         &kp S 
-    //         &kp GRAVE 
-    //         &kp LPAR 
-    //         &kp RPAR
-    //         &kp LEFT>;
-    //     };
-    // };
+    macros {
+        homologo: homologo {
+            label = "HOMOLOGO";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LSHFT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp R &kp E &kp S &kp P &kp A &kp L &kp D &kp O>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp I &kp N &kp T &kp E &kp L &kp I &kp G &kp E &kp N &kp C &kp I &kp A>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp MINUS>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp R &kp I &kp E &kp S &kp G &kp O>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp H &kp O &kp M &kp O &kp L &kp O &kp G &kp A &kp UNDER>
+                , <&macro_tap &kp C &kp U &kp E &kp N &kp T &kp A &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp LPAR &kp RPAR>
+                ;
+        };
+    };
         //  strings {
             //      HOMOLOGO = "`respaldo-inteligencia-riesgo.cobranza.HOMOLOGA_CUENTAS`()";
             //      CREATE_TB = "CREATE OR REPLACE TABLE `respaldo-inteligencia-riesgo.WSP_GJORQUERA.CREATE_TB`";
@@ -169,7 +140,7 @@
             &kp A     HRML(R,         S,         T)     &kp D          &kp H      HRMR(N,        E,           I,       O)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &ht LGUI Z  &kp X      &kp C      &kp V      &kp B          &kp K      &kp M      &td0  &kp DOT    &td2
+            &ht LGUI Z  &kp X      &kp C      &kp V      &kp B          &kp K     &kp M      &td0      &kp DOT    &td2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                            &lt NUM LGUI  &ht RALT BSPC    &lt SYM ENTER  &lt NAV SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -178,52 +149,52 @@
 
         num_layer { //FALTA MACRO DE HOMOLOGO
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp C_PREV   &kp C_PP  &kp C_NEXT  &trans     &kp PSCRN   &trans      &kp N7      &kp N8      &kp N9      &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP   &trans   &trans  &kp LS(N8)       &kp N4    &kp N5     &kp N6      &kp MINUS   
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans    &trans     &trans   &trans   &kp LG(E)           &kp LS(N6)      &kp N1      &kp N2  &kp N3    &kp PLUS
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &trans  &kp BSPC              &kp N0    &lt FN EQUAL
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //╭─────────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q          │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+            &kp C_PREV   &kp C_PP   &kp C_NEXT &trans     &kp PSCRN      &trans      &kp N7     &kp N8     &kp N9     &trans
+        //├─────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A          │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
+            &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans   &trans         &kp LS(N8) &kp N4     &kp N5     &kp N6     &kp MINUS   
+        //├─────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z          │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
+            &homologo    &trans     &trans    &trans       &kp LG(E)     &kp LS(N6) &kp N1      &kp N2    &kp N3      &kp PLUS
+        //╰─────────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                               &trans     &kp BSPC       &kp N0     &lt FN EQUAL
+        //                                    ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
         nav_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &trans      &trans      &trans      &trans      &trans    &kp C_AC_SCROLL_UP   &kp HOME   &kp UP   &kp END   &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &trans    &trans        &trans    &kp DEL      &trans     &kp C_AC_SCROLL_DOWN       &kp LEFT    &kp DOWN     &kp RIGHT      &trans   
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &trans      &trans      &trans     &trans      &trans    &trans      &trans      &trans  &trans    &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt FN DEL        &kp BSPC               &trans  &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮    ╭────────────────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  W       │  E       │  R       │  T       │    │  Y                 │  U       │  I       │  O       │  P       │
+            &trans      &trans      &trans      &trans      &trans     &kp C_AC_SCROLL_UP    &kp HOME   &kp UP     &kp END    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤    ├────────────────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  D       │  F       │  G       │    │  H                 │  J       │  K       │  L       │BACKSPACE │
+            &trans    &trans        &trans    &kp DEL      &trans      &kp C_AC_SCROLL_DOWN  &kp LEFT   &kp DOWN   &kp RIGHT  &trans   
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤    ├────────────────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  C       │  V       │  B       │    │  N                 │  M       │ , <      │ . >      │ ENTER    │
+            &trans      &trans      &trans     &trans      &trans      &trans                &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤    ├────────────────────┼──────────┼──────────┴──────────┴──────────╯
+                                           &lt FN DEL     &kp BSPC     &trans                &trans
+        //                                 ╰──────────┴──────────╯    ╰────────────────────┴──────────╯
             >;
         };
 
         sym_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp EXCL      &kp UNDER      &kp AT      &trans      &trans    &kp KP_ASTERISK  &kp LBKT      &kp CARET     &kp RBKT     &kp GRAVE
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &trans    &kp LS(N7)   &kp LS(N7)   &trans    &trans       &kp BSLH      &kp LPAR      &kp DLLR     &kp RPAR     &trans   
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &trans      &trans     &kp PIPE      &kp LBRC      &kp HASH     &kp RBRC     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &trans  &kp BSPC              &trans  &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //╭────────────┬──────────┬──────────┬──────────┬──────────╮   ╭────────────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q         │  W       │  E       │  R       │  T       │   │  Y             │  U       │  I       │  O       │  P       │
+            &kp EXCL    &kp UNDER  &kp AT     &trans     &trans         &kp KP_ASTERISK  &kp LBKT   &kp CARET  &kp RBKT   &kp GRAVE
+        //├────────────┼──────────┼──────────┼──────────┼──────────┤   ├────────────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A         │  S       │  D       │  F       │  G       │   │  H             │  J       │  K       │  L       │BACKSPACE │
+            &trans      &kp LS(N7) &kp LS(N7) &trans     &trans         &kp BSLH         &kp LPAR   &kp DLLR   &kp RPAR   &trans   
+        //├────────────┼──────────┼──────────┼──────────┼──────────┤   ├────────────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z         │  X       │  C       │  V       │  B       │   │  N             │  M       │ , <      │ . >      │ ENTER    │
+            &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1  &trans  &trans       &kp PIPE          &kp LBRC  &kp HASH   &kp RBRC   &trans
+        //╰────────────┴──────────┴──────────┼──────────┼──────────┤   ├────────────────┼──────────┼──────────┴──────────┴──────────╯
+                                              &trans     &kp BSPC        &trans    &trans
+        //                                   ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
@@ -231,15 +202,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp TAB      &trans      &trans      &trans      &kp ESC    &trans      &kp F7      &kp F8      &kp F9      &kp F10
+            &kp TAB    &trans      &trans     &trans   &kp ESC        &trans     &kp F7     &kp F8     &kp F9     &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp DEL    &kp LALT     &trans    &trans    &trans          &trans       &kp F4    &kp F5     &kp F6      &kp F11   
+            &kp DEL    &kp LALT    &trans     &trans   &trans         &trans     &kp F4     &kp F5     &kp F6     &kp F11   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp CAPS    &trans    &trans    &trans     &kp C_SLEEP      &trans      &kp F1      &kp F2  &kp F3    &kp F12
+            &kp CAPS   &trans      &trans     &trans   &kp C_SLEEP    &trans     &kp F1     &kp F2     &kp F3     &kp F12
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &trans      &trans           &trans  &trans
+                                            &trans      &trans         &trans  &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
