@@ -91,22 +91,31 @@
             label = "HOMOLOGO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings
                 = <&macro_tap &kp GRAVE>
-                , <&macro_tap &kp LS(R) &kp LS(E) &kp LS(S) &kp LS(P) &kp LS(A) &kp LS(L) &kp LS(D) &kp LS(O)>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp R>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp E &kp S &kp P &kp A &kp L &kp D &kp O>
                 , <&macro_tap &kp MINUS>
-                , <&macro_tap &kp LS(I) &kp LS(N) &kp LS(T) &kp LS(E) &kp LS(L) &kp LS(I) &kp LS(G) &kp LS(E) &kp LS(N) &kp LS(C) &kp LS(I) &kp LS(A)>
+                , <&macro_tap &kp I &kp N &kp T &kp E &kp L &kp I &kp G &kp E &kp N &kp C &kp I &kp A>
                 , <&macro_tap &kp MINUS>
-                , <&macro_tap &kp LS(R) &kp LS(I) &kp LS(E) &kp LS(S) &kp LS(G) &kp LS(O)>
+                , <&macro_tap &kp R &kp I &kp E &kp S &kp G &kp O>
                 , <&macro_tap &kp DOT>
-                , <&macro_tap &kp LS(C) &kp LS(O) &kp LS(B) &kp LS(R) &kp LS(A) &kp LS(N) &kp LS(Z) &kp LS(A)>
+                , <&macro_tap &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A>
                 , <&macro_tap &kp DOT>
-                , <&macro_tap &kp LS(H) &kp LS(O) &kp LS(M) &kp LS(O) &kp LS(L) &kp LS(O) &kp LS(G) &kp LS(A) &kp UNDER>
-                , <&macro_tap &kp LS(C) &kp LS(U) &kp LS(E) &kp LS(N) &kp LS(T) &kp LS(A) &kp LS(S)>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp H &kp O &kp M &kp O &kp L &kp O &kp G &kp A>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp UNDER>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp C &kp U &kp E &kp N &kp T &kp A &kp S>
+                , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp GRAVE>
-                , <&macro_tap &kp LPAR &kp RPAR>
+                , <&macro_tap &kp LPAR>
+                , <&macro_tap &kp RPAR>
                 ;
         };
     };
