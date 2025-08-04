@@ -87,39 +87,36 @@
     // };
 
     macros {
-        homologo: homologo {
-            label = "HOMOLOGO";
+        homologo1: homologo1 {
+            label = "HOMOLOGO1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;
-            tap-ms = <50>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings
                 = <&macro_tap &kp GRAVE>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp R &kp E &kp S &kp P &kp A &kp L &kp D &kp O>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp MINUS>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp I &kp N &kp T &kp E &kp L &kp I &kp G &kp E &kp N &kp C &kp I &kp A>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp MINUS>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp R &kp I &kp E &kp S &kp G &kp O>
-                , <&macro_wait_time 100>
-                , <&macro_tap &kp DOT>
-                , <&macro_wait_time 100>
+                ;
+        };
+
+        homologo2: homologo2 {
+            label = "HOMOLOGO2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp DOT>
                 , <&macro_tap &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp DOT>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp LS(H) &kp LS(O) &kp LS(M) &kp LS(O) &kp LS(L) &kp LS(O) &kp LS(G) &kp LS(A)>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp UNDER>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp LS(C) &kp LS(U) &kp LS(E) &kp LS(N) &kp LS(T) &kp LS(A) &kp LS(S)>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp GRAVE>
-                , <&macro_wait_time 100>
                 , <&macro_tap &kp LPAR &kp RPAR>
                 ;
         };
@@ -159,7 +156,7 @@
             &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans   &trans         &kp LS(N8) &kp N4     &kp N5     &kp N6     &kp MINUS   
         //├─────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z          │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &homologo    &trans     &trans    &trans       &kp LG(E)     &kp LS(N6) &kp N1      &kp N2    &kp N3      &kp PLUS
+            &homologo1   &homologo2 &trans    &trans       &kp LG(E)     &kp LS(N6) &kp N1      &kp N2    &kp N3      &kp PLUS
         //╰─────────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                &trans     &kp BSPC       &kp N0     &lt FN EQUAL
         //                                    ╰──────────┴──────────╯   ╰──────────┴──────────╯
