@@ -113,9 +113,13 @@
                 = <&macro_tap &kp DOT>
                 , <&macro_tap &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A>
                 , <&macro_tap &kp DOT>
-                , <&macro_tap &kp LS(H) &kp LS(O) &kp LS(M) &kp LS(O) &kp LS(L) &kp LS(O) &kp LS(G) &kp LS(A)>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp H &kp O &kp M &kp O &kp L &kp O &kp G &kp A>
+                , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp UNDER>
-                , <&macro_tap &kp LS(C) &kp LS(U) &kp LS(E) &kp LS(N) &kp LS(T) &kp LS(A) &kp LS(S)>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp C &kp U &kp E &kp N &kp T &kp A &kp S>
+                , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp GRAVE>
                 , <&macro_tap &kp LPAR &kp RPAR>
                 ;
