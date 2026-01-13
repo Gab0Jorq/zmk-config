@@ -87,24 +87,79 @@
     // };
 
     macros {
-        homologo_full: homologo_full {
-            label = "HOMOLOGO_FULL";
+        hom1: hom1 {
+            label = "HOMOLOGO1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <30>;
+            tap-ms = <30>;
             bindings
-                // 1. Aseguramos minúsculas soltando Shift por si acaso
-                = <&macro_release &kp LSHFT>
-                , <&macro_tap &kp GRAVE &kp R &kp E &kp S &kp P &kp A &kp L &kp D &kp O &kp MINUS &kp I &kp N &kp T &kp E &kp L &kp I &kp G &kp E &kp N &kp C &kp I &kp A &kp MINUS &kp R &kp I &kp E &kp S &kp G &kp O &kp DOT &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A &kp DOT>
-                
-                // 2. Forzamos mayúsculas presionando Shift
+                = <&macro_tap &kp GRAVE>
+                , <&macro_tap &kp R &kp E &kp S &kp P &kp A &kp L &kp D &kp O>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp I &kp N &kp T &kp E &kp L &kp I &kp G &kp E &kp N &kp C &kp I &kp A>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp R &kp I &kp E &kp S &kp G &kp O>
+                ;
+        };
+
+        hom2: hom2 {
+            label = "HOMOLOGO2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp DOT>
+                , <&macro_tap &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A>
+                , <&macro_tap &kp DOT>
                 , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp H &kp O &kp M &kp O &kp L &kp O &kp G &kp A &kp UNDER &kp C &kp U &kp E &kp N &kp T &kp A &kp S>
-                
-                // 3. Soltamos Shift para los símbolos finales
+                , <&macro_tap &kp H &kp O &kp M &kp O &kp L &kp O &kp G &kp A>
                 , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp GRAVE &kp LPAR &kp RPAR>
+                , <&macro_tap &kp UNDER>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp C &kp U &kp E &kp N &kp T &kp A &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_tap &kp LPAR &kp RPAR>
+                ;
+        };
+
+        hom1may: hom1may {
+            label = "HOMOLOGO1MAYUS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp GRAVE>
+                , <&macro_tap &kp R &kp E &kp S &kp P &kp A &kp L &kp D &kp O>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp I &kp N &kp T &kp E &kp L &kp I &kp G &kp E &kp N &kp C &kp I &kp A>
+                , <&macro_tap &kp MINUS>
+                , <&macro_tap &kp R &kp I &kp E &kp S &kp G &kp O>
+                ;
+        };
+
+        hom2may: hom2may {
+            label = "HOMOLOGO2MAYUS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp DOT>
+                , <&macro_tap &kp C &kp O &kp B &kp R &kp A &kp N &kp Z &kp A>
+                , <&macro_tap &kp DOT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp H &kp O &kp M &kp O &kp L &kp O &kp G &kp A>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp UNDER>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp C &kp U &kp E &kp N &kp T &kp A &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_tap &kp LPAR &kp RPAR>
                 ;
         };
     };
@@ -143,7 +198,7 @@
             &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans   &trans         &kp LS(N8) &kp N4     &kp N5     &kp N6     &kp MINUS   
         //├─────────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z          │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &homologo_full   &trans &trans    &trans       &kp LG(E)     &kp LS(N6) &kp N1      &kp N2    &kp N3      &kp PLUS
+            &hom1may      &hom2may  &hom1       &hom2       &kp LG(E)     &kp LS(N6) &kp N1      &kp N2    &kp N3      &kp PLUS
         //╰─────────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                &trans     &kp BSPC       &kp N0     &lt FN EQUAL
         //                                    ╰──────────┴──────────╯   ╰──────────┴──────────╯
